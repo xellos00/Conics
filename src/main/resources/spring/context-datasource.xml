@@ -11,11 +11,18 @@
         <property name="password" value="비밀번호"/>
     </bean> -->
 
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
         <property name="url" value="jdbc:oracle:thin:@45.32.22.46:1521:xe"/>
         <property name="username" value="DONGYO"/>
         <property name="password" value="kangdongyo"/>
+    </bean> -->
+    
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
+        <property name="username" value="OGT_FTA_MAIN"/>
+        <property name="password" value="OGT_FTA_MAIN"/>
     </bean>
 
 </beans>
