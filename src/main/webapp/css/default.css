@@ -1,0 +1,358 @@
+@charset "utf-8";
+
+div .alert-container {
+    padding-top: 5px;
+}
+
+#fixed-menu {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+#main-content {
+    width: 100%;
+   /* margin-top: -5px; */
+}
+
+.config_value {
+    color: #ff8040;
+    font-weight: bold;
+}
+
+.config_btn_posit {
+    float: right;
+    margin-right: 5px;
+}
+
+.configTable {
+    width: 100%;  
+    margin: 0 0 0 0;
+    border-collapse: collapse;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.configTable>thead>tr{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.configTable>thead>tr>th{
+    background-color: #ebf1fd;
+    padding: 5px 10px;
+    text-align: left;
+    font-size: 9pt;
+}
+
+.configTable>tbody>tr{
+    border-bottom: 1px solid #e4e4e4;
+}
+.configTable>tbody>tr:hover {
+	background: #ebf1fd;
+}
+
+
+.configTable>tbody>tr>td {
+    padding: 5px 10px;
+    text-align: left;
+    font-size: 9pt;
+    font-wight : normal;
+    height : 25px;
+}
+
+
+
+
+.geopackModal .modal-dialog {
+    width: 80%;
+    height: 50%
+}
+
+
+.bento-wizard ul.contents{
+    width: 100%;
+    padding: 0px;
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 5px
+}
+
+.flt_r   {float:right;}
+
+.bento-container{
+    /* padding: 16px 0px 0px 16px; */
+    padding: 0px 0px 0px 16px;
+}
+
+
+.materialDeModal .modal-dialog {
+    width: 80%;
+    height: 50%
+}
+
+.detail_view {
+    /* float: right;
+    padding-right: 20px; */
+    cursor: pointer;
+    /* font-size: 20px; */
+}
+
+.detail_view:hover {
+   /*  float: right;
+    padding-right: 20px; */
+    cursor: pointer;
+    /* font-size: 25px; */
+    color: #e28203;
+    -webkit-box-shadow: 2px 5px 3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 2px 5px 3px rgba(0,0,0,0.4);
+    box-shadow: 2px 5px 3px rgba(0,0,0,0.4);
+    
+}
+
+.con_b_l {
+   border-bottom: solid 1px #c0c0c0; 
+}
+
+@media ( min-width :768px) {
+    .form-horizontal .control-label {
+        text-align: left;
+    }
+}
+
+.form-horizontal .control-label, .form-horizontal .checkbox, .form-horizontal .radio-inline, .form-horizontal .checkbox-inline {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 7px;
+    width:210px;
+}
+
+.smallModal .modal-dialog {
+    width: 70%;
+    height: 50%;
+}
+
+.smallModalex .modal-dialog {
+    width: 70%;
+    height: 70%;
+}
+
+.largeModal .modal-dialog {
+    width: 80%;
+    height: 70%;
+}
+
+.smallFileUploadModal .modal-dialog {
+    width: 50%;
+    height: 50%;
+}
+
+.cfDesc{
+   /* width: 25%;*/
+}
+
+.cfConeten{
+   /* width: 75%;*/ 
+    background-color: #ffffff;
+}
+
+.tableInputbox{
+    width: 100%;
+    height: 22px;
+    color: #e28203; 
+    font-weight: normal;
+    border: 0px;
+}
+
+.active {
+    background: #535353;
+    color: #ffffff;
+    border: 1px solid;
+}
+
+#modal_left {
+    width: 100%;
+    height: 164px;
+    float: left;
+    padding: 5px;
+}
+
+#modal_right {
+    width: 100%;
+    height: 100%;
+    float: right;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+#modal_all {
+    width: 100%;
+    height: 100%;
+}
+
+.modal .modal-dialog .modal-content .modal-footer {
+    text-align: left;
+    margin: 0;
+    padding: 0px 0 0;
+}
+
+.modal-header {
+    border-bottom: 0px;
+}
+
+.modal-footer {
+    border-top: 0px;
+}
+
+
+.ui-widget-content {
+border: 1px solid #efefef;
+-moz-box-shadow: 2px 2px 10px #000000;
+-webkit-box-shadow: 2px 2px 10px #000000;
+box-shadow: 2px 2px 10px #000000;
+background: #ffffff;
+color: #222222;
+}
+
+.ui-widget-header a {
+color: #ffffff;
+}
+
+.ui-widget-header {
+border: 1px solid #ffffff;
+background: #535353;
+color: #ffffff;
+font-weight: bold;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default 
+{
+border: 1px solid #ffffff;
+background: #e6e6e6;
+font-weight: normal;
+color: #555555;
+}
+
+.ui-datepicker-current-day{
+    background: #e28203;
+    color: #e28203;
+}
+
+.ui-datepicker-today{
+    background: #0080c0;
+    color: #0080c0;
+}
+
+.bento-transferbox .transferbox-header-info.pull-left {
+    margin-left: 20px
+}
+
+.bento-transferbox .transferbox-header-info.pull-right {
+    margin-right: 20px
+}
+
+.btn.btn-default[disabled] {
+    color: #bbb;
+    background-color: #ebebeb;
+    border-color: #c3c1c1;
+    maring-top: 12px;
+}
+
+.bento-transferbox .transferbox-btn {
+    margin: 12px 15px
+}
+
+.dataTables_scrollHeadInner{
+    box-sizing: content-box;
+    padding-left: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: black;
+}
+
+.bento-transferbox .bento-splitter-handle {
+    border-top: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+    top: 52px;
+    bottom: 116px
+}
+
+table.dataTable tbody th, table.dataTable tbody td{
+    padding: 5px; 10px;
+}
+
+table.dataTable.no-footer {
+font-size: 14px;
+}
+
+
+
+.historyTable td, .historyTable th {
+	/* appearance */
+	border-right: 1px solid #ffffff;
+	border-bottom: 1px solid #efefef;
+	
+	/* size */
+	padding: 2px;
+	}
+
+.historyTable {
+	/* text */
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	width : 100%;
+	}
+
+.historyTable tbody tr td {
+	/* appearance */
+	background-color: #efefef;
+	background : linear-gradient(to bottom, #F9F9F9 0, #efefef 100%);
+	background : repeat-x;
+	/* text */
+	font-size: 9pt;
+	font-wight : normal;
+	height : 25px;
+	
+	}
+
+.historyTable tbody tr.odd td {
+	/* appearance */
+	background-color: #d6e0ef;
+	background-image: -moz-linear-gradient(
+		top,
+		rgba(255,255,255,0.4) 0%,
+		rgba(255,255,255,0.2) 50%,
+		rgba(255,255,255,0.1) 51%,
+		rgba(255,255,255,0.0) 100%);
+	
+	background-image: -webkit-gradien t(
+		linear, left top, left bottom,
+		color-stop(0%,rgba(255,255,255,0.4)),
+		color-stop(50%,rgba(255,255,255,0.2)),
+		color-stop(51%,rgba(255,255,255,0.1)),
+		color-stop(100%,rgba(255,255,255,0.0)));
+	}
+
+.historyTable thead tr th,
+.historyTable thead tr td,
+.historyTable tfoot tr th, 
+.historyTable tfoot tr td {
+	
+	/* appearance */
+	background-color: #efefef;
+	/* text */
+	font-size: 9pt;
+	font-weight : normal;
+	text-align: center;
+	vertical-align : middle;
+	height : 25px;
+	}
+
+.tg  {border-collapse:collapse;border-spacing:0;border:none;}
+.tg td{font-family:Arial, sans-serif;font-size:12px;padding:5px 10px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
+.tg .tg-baqhfist{text-align:left; vertical-align:top; padding:0px 0px;}
+.tg .tg-baqh{text-align:center; vertical-align:top}
