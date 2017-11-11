@@ -30,7 +30,7 @@
         <mvc:interceptor>
             <mvc:mapping path="/**" />
             <mvc:exclude-mapping path="/resources/**" />
-            <bean id="UrlSessionInterceptor" class="com.web.app.common.common.url.UrlSessionInterceptor"></bean>
+            <bean id="UrlSessionInterceptor" class="com.web.app.common.common.intercetpor.UrlSessionInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
     
