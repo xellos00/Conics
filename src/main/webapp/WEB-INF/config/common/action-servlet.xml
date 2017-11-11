@@ -14,7 +14,7 @@
                         http://www.springframework.org/schema/mvc
                         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <context:component-scan base-package="com.web.app">
-        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
     
     <aop:aspectj-autoproxy proxy-target-class="true" />
@@ -25,7 +25,12 @@
         <mvc:interceptor>
             <mvc:mapping path="/**" />
             <mvc:exclude-mapping path="/resources/**" />
-            <bean id="loggerInterceptor" class="com.web.app.common.logger.LoggerInterceptor"></bean>
+            <bean id="loggerInterceptor" class="com.web.app.common.common.logger.LoggerInterceptor"></bean>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <mvc:exclude-mapping path="/resources/**" />
+            <bean id="UrlSessionInterceptor" class="com.web.app.common.common.url.UrlSessionInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
     
