@@ -1,4 +1,4 @@
-package com.web.app.common.common.util;
+package com.web.app.common.util;
 
 import java.util.UUID;
 
