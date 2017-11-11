@@ -1,4 +1,4 @@
-package com.web.app.common.common.intercetpor;
+package com.web.app.common.intercetpor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

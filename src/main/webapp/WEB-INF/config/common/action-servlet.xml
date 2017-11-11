@@ -25,18 +25,18 @@
         <mvc:interceptor>
             <mvc:mapping path="/**" />
             <mvc:exclude-mapping path="/resources/**" />
-            <bean id="loggerInterceptor" class="com.web.app.common.common.logger.LoggerInterceptor"></bean>
+            <bean id="loggerInterceptor" class="com.web.app.common.logger.LoggerInterceptor"></bean>
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/**" />
             <mvc:exclude-mapping path="/resources/**" />
-            <bean id="UrlSessionInterceptor" class="com.web.app.common.common.intercetpor.UrlSessionInterceptor"></bean>
+            <bean id="UrlSessionInterceptor" class="com.web.app.common.intercetpor.UrlSessionInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
     
     <mvc:annotation-driven>
         <mvc:argument-resolvers>
-            <bean class="com.web.app.common.common.resolver.CustomMapArgumentResolver"></bean>
+            <bean class="com.web.app.common.resolver.CustomMapArgumentResolver"></bean>
         </mvc:argument-resolvers>
     </mvc:annotation-driven>
     
