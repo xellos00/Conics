@@ -1,4 +1,4 @@
-package com.web.app.common.resolver;
+package com.web.app.common.common.resolver;
 
 import java.util.Enumeration;
 

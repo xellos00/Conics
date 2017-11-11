@@ -36,7 +36,7 @@
     
     <mvc:annotation-driven>
         <mvc:argument-resolvers>
-            <bean class="com.web.app.common.resolver.CustomMapArgumentResolver"></bean>
+            <bean class="com.web.app.common.common.resolver.CustomMapArgumentResolver"></bean>
         </mvc:argument-resolvers>
     </mvc:annotation-driven>
     

@@ -1,4 +1,4 @@
-package com.web.app.common.dao;
+package com.web.app.common.common.dao;
 
 import java.util.List;
 
