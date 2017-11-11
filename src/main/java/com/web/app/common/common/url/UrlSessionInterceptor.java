@@ -18,6 +18,7 @@ public class UrlSessionInterceptor extends HandlerInterceptorAdapter {
             log.debug("======================================          UrlSessionInterceptor         ======================================");
             log.debug(" Request URI \t:  " + request.getRequestURI());
         }
+        
         return super.preHandle(request, response, handler);
     }
      
@@ -25,6 +26,7 @@ public class UrlSessionInterceptor extends HandlerInterceptorAdapter {
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         if (log.isDebugEnabled()) {
             log.debug("======================================           UrlSessionInterceptor          ======================================\n");
+        
         }
     }
 }
