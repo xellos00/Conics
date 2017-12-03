@@ -6,6 +6,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+YOLO !!!
     <jsp:forward page="/sample/openSampleList.do"/>
 </body>
 </html>
