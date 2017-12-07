@@ -24,12 +24,10 @@
         <!-- 공통 Interceptor -->
         <mvc:interceptor>
             <mvc:mapping path="/**" />
-            <mvc:exclude-mapping path="/resources/**" />
             <bean id="loggerInterceptor" class="com.web.app.common.logger.LoggerInterceptor"></bean>
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/**" />
-            <mvc:exclude-mapping path="/resources/**" />
             <bean id="UrlSessionInterceptor" class="com.web.app.common.intercetpor.UrlSessionInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
