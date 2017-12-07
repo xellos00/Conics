@@ -2,12 +2,15 @@
 <beans xmlns="http://www.springframework.org/schema/beans" 
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:p="http://www.springframework.org/schema/p" 
+        xmlns:mvc="http://www.springframework.org/schema/mvc"
         xmlns:context="http://www.springframework.org/schema/context"
         xmlns:aop="http://www.springframework.org/schema/aop"
         xmlns:tx="http://www.springframework.org/schema/tx"
         xmlns:task="http://www.springframework.org/schema/task"
         xsi:schemaLocation="http://www.springframework.org/schema/beans 
                             http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                            http://www.springframework.org/schema/mvc 
+                            http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd 
                             http://www.springframework.org/schema/context 
                             http://www.springframework.org/schema/context/spring-context-3.2.xsd
                             http://www.springframework.org/schema/aop 
@@ -18,6 +21,29 @@
     <context:component-scan base-package="com.web.app" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
+    
+    <mvc:resources location="/WEB-INF/resources/" mapping="/resources/**" />
+    
+    
+    <bean id="handlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"
+        p:alwaysUseFullPath="true">    
+        <property name="mappings">
+            <props>
+                <prop key="conics/**/login.view">simpleForwardController</prop>
+                <prop key="conics/**/ssoLogin.view">simpleForwardController</prop>
+                <prop key="conics/**/mainForward.view">simpleForwardController</prop>
+                <prop key="conics/**/pwsChange.view">simpleForwardController</prop>
+                <prop key="conics/**/mainContents.view">simpleForwardController</prop>
+                <prop key="conics/**/ServerDigitalSignature.view">simpleForwardController</prop>
+                <prop key="conics/**/checkSession.view">simpleForwardController</prop>
+                <prop key="conics/**/**.fle">fileForwardController</prop>
+                <prop key="conics/ex/cert/login.do">certifyForwordController</prop>
+                <prop key="conics/ex/cert/logout.do">certifyForwordController</prop>
+                <prop key="conics/ex/cert/sessionCheck.do">certifyForwordController</prop>
+            </props>
+        </property>
+        <property name="order" value="1" />
+    </bean>
     
     <bean class="org.springframework.web.servlet.view.UrlBasedViewResolver" 
           p:order="1" 
