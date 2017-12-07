@@ -4,10 +4,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Iterator;
+import java.util.Map;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.web.multipart.MultipartFile;
+
 
 public class FileUtil {
     
@@ -23,12 +26,12 @@ public class FileUtil {
      * </p>
      *
      * @param fileItem
-     *          파일 업로드 리퀘스트로부터 얻어지는 FileItem 객체
+     *            파일 업로드 리퀘스트로부터 얻어지는 FileItem 객체
      * @param key
-     *          FileItem 객체에 대한 키 값
+     *            FileItem 객체에 대한 키 값
      */
     public FileUtil(MultipartFile fileItem) {
-      this.fileItem = fileItem;
+        this.fileItem = fileItem;
     }
     
     /**
@@ -195,4 +198,5 @@ public class FileUtil {
         }
         return fileName;
     }
+    
 }
