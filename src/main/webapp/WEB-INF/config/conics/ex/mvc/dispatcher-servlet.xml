@@ -31,6 +31,14 @@
         <property name="prefixName" value="ex"/>
     </bean>
     
+    <bean id="conicsForwordController" class="com.web.app.conics.controller.ConicsForwordController">
+        <property name="mainService">
+            <ref bean="exMainService"/>
+        </property>
+        <property name="prefixName" value="ex"/>
+        <property name="certifyType" value="external"/>
+    </bean>
+    
     <bean id="handlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"
         p:alwaysUseFullPath="true">    
         <property name="mappings">

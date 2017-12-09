@@ -35,10 +35,6 @@ public class ConicsForwordController implements Controller{
     
     private String prefixName; // ¾÷¹«¸í
     
-    public String internalUserID = "";
-    public String externalUserID = "";
-    public String COMC = "";
-    
     public void setCertifyType(String type) {
         this.certifyType = type;
     }
