@@ -24,6 +24,12 @@
     
     <mvc:resources location="/WEB-INF/resources/" mapping="/resources/**" />
     
+    <bean id="simpleForwardController" class="com.tr.k2.common.controller.SimpleForwardController">
+        <property name="prefixName" value="ex"/>
+    </bean>
+    <bean id="responseInterceptorHandler" class="com.tr.k2.common.handler.ResponseInterceptorHandler">
+        <property name="prefixName" value="ex"/>
+    </bean>
     
     <bean id="handlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"
         p:alwaysUseFullPath="true">    

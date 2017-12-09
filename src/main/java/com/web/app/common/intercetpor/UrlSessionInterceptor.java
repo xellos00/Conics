@@ -25,7 +25,7 @@ public class UrlSessionInterceptor extends HandlerInterceptorAdapter {
         response.setContentType("text/html;charset=utf-8");
         response.setCharacterEncoding("UTF-8");
         
-        Object sessionUserObject = request.getSession().getAttribute(Constants.session.USER_SESSION_KEY);
+        Object sessionUserObject = request.getSession().getAttribute(Constants.session.KEY_USER_SESSION);
         String getRequestURI = request.getRequestURI();
         String getRequestURL = request.getRequestURL().toString();
         String getServletPath = request.getServletPath(); // /util/selectCompanyList.do

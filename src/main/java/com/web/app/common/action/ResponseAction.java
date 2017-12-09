@@ -19,7 +19,7 @@ import com.web.app.common.util.StringUtil;
 import net.sf.json.JSONArray;
 
 
-public class responseAction {
+public class ResponseAction {
     
     protected static Log log = LogFactory.getLog(UrlSessionInterceptor.class);
     

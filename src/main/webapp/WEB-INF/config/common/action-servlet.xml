@@ -30,6 +30,10 @@
             <mvc:mapping path="/**" />
             <bean id="UrlSessionInterceptor" class="com.web.app.common.intercetpor.UrlSessionInterceptor"></bean>
         </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <bean id="responseInterceptor" class="com.web.app.common.intercetpor.ResponseInterceptor"></bean>
+        </mvc:interceptor>
     </mvc:interceptors>
     
     <mvc:annotation-driven>
@@ -39,6 +43,17 @@
     </mvc:annotation-driven>
     
     <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+    
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>        
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/cmmn/validator.do">urlFilenameViewController</prop>
+            </props>
+        </property>
+    </bean>
+    
+    <bean id="urlFilenameViewController" class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
     
     <!-- <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" p:order="0" />
     
