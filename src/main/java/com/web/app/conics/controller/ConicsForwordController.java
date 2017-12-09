@@ -20,7 +20,6 @@ import com.web.app.common.Constants;
 import com.web.app.common.action.ResponseAction;
 import com.web.app.common.common.main.service.MainService;
 import com.web.app.common.commonMap.CommonMap;
-import com.web.app.common.intercetpor.UrlSessionInterceptor;
 import com.web.app.common.util.ServletUtil;
 import com.web.app.common.util.StringUtil;
 
@@ -191,6 +190,66 @@ public class ConicsForwordController implements Controller{
         mav.setViewName(redirectUrl);
         
         return mav;
+    }
+    
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+    private Map getUserLoginInfo(CommonMap commonMap) throws Exception {
+        /*Map result = mainService.selectMember(commonMap.getMap());*/
+        
+        Map result = new HashMap();
+        
+        if (result != null && result.size() > 0) {
+            
+            commonMap.put(Constants.KEY_COMPANY_CODE, result.get(Constants.KEY_COMPANY_CODE) + "");
+            
+            /*Map conResult = mainService.selectConfiguration(DataMapHelper.getMap(dataMap));
+            
+            if (conResult != null && conResult.size() > 0 && (certifyType.equals("internal") || certifyType.equals("settings") || certifyType.equals("external"))) {
+                
+                Iterator<String> iterator = conResult.keySet().iterator();
+                while (iterator.hasNext()) {
+                    String hkey = (String) iterator.next();
+                    String hvalue = (String) conResult.get(hkey);
+                    result.put(hkey, hvalue);
+                }
+            }*/
+            
+            // 사용자 정보에 설정된 기본언어 설정
+            /*String defaultLanguage = StringHelper.null2string(result.get(Constants.KEY_USE_LANG_CODE), ConfiguratorFactory.getInstance().getConfigurator().getString("application.context.language"));
+            result.put(Constants.KEY_USE_LANG_CODE, defaultLanguage);
+            result.put(Constants.KEY_S_DEFAULT_LANGUAGE, defaultLanguage);*/
+            
+            // 권한 부여(허용:inline, 거부:none)
+            result.put(Constants.KEY_SEL_AUTH, "none"); // 현재 조회 권한은 무조건 허용(inline)하고 있음
+            result.put(Constants.KEY_REG_AUTH, "none");
+            result.put(Constants.KEY_UPD_AUTH, "none");
+            result.put(Constants.KEY_DEL_AUTH, "none");
+            result.put(Constants.KEY_EXC_AUTH, "none");
+            result.put(Constants.KEY_FLE_AUTH, "none");
+            
+            // 회사정보 설정
+            result.put(Constants.KEY_COMPANY_CODE, result.get(Constants.KEY_COMPANY_CODE) + "");
+            
+            // 생성자와 수정자 설정
+            result.put(Constants.KEY_LOGIN_ID, result.get(Constants.KEY_LOGIN_ID) + "");
+            result.put(Constants.KEY_USER_ID, result.get(Constants.KEY_USER_ID) + "");
+            result.put(Constants.KEY_CREATE_BY, result.get(Constants.KEY_USER_ID) + "");
+            result.put(Constants.KEY_UPDATE_BY, result.get(Constants.KEY_USER_ID) + "");
+            result.put(Constants.KEY_S_CERTIFY_TYPE, commonMap.get("CERTIFY_TYPE"));
+            
+            // login log를 저장
+            commonMap.put(Constants.KEY_USER_ID, result.get(Constants.KEY_USER_ID) + "");
+            commonMap.put(Constants.KEY_COMPANY_CODE, result.get(Constants.KEY_COMPANY_CODE) + "");
+            /*String logSeq = mainService.insertLogMgrMst(DataMapHelper.getMap(dataMap));
+            result.put(Constants.KEY_LOG_SN, logSeq);*/
+            
+        } else {
+            
+            return null;
+            // throw new EframeException("not found user information.");
+        }
+        
+        return result;
     }
     
 }

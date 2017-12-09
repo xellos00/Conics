@@ -24,10 +24,10 @@
     
     <mvc:resources location="/WEB-INF/resources/" mapping="/resources/**" />
     
-    <bean id="simpleForwardController" class="com.tr.k2.common.controller.SimpleForwardController">
+    <bean id="simpleForwardController" class="com.web.app.common.controller.SimpleForwardController">
         <property name="prefixName" value="ex"/>
     </bean>
-    <bean id="responseInterceptorHandler" class="com.tr.k2.common.handler.ResponseInterceptorHandler">
+    <bean id="responseInterceptorHandler" class="com.web.app.common.intercetpor.ResponseInterceptor">
         <property name="prefixName" value="ex"/>
     </bean>
     
@@ -65,5 +65,7 @@
           p:prefix="/WEB-INF/jsp/conics/ex" 
           p:suffix=".jsp">
     </bean>
+    
+    <bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
                             
 </beans>   

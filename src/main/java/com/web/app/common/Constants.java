@@ -27,6 +27,14 @@ public class Constants {
 
     public static final String KEY_EXC_AUTH = "EXC_AUTH";
     
+    public static final String KEY_CREATE_BY = "CREATE_BY";
+
+    public static final String KEY_UPDATE_BY = "UPDATE_BY";
+    
+    public static final String KEY_PREFIX_NAME = "PREFIX_NAME";
+
+    public static final String KEY_S_CERTIFY_TYPE = "S_CERTIFY_TYPE";
+    
     public static class main {
         
         public static final String MAIN_VIEW = "/main/mainMove.do";
