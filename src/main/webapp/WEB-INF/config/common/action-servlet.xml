@@ -28,11 +28,11 @@
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/**" />
-            <bean id="UrlSessionInterceptor" class="com.web.app.common.intercetpor.UrlSessionInterceptor"></bean>
+            <bean id="UrlSessionInterceptor" class="com.web.app.common.interceptor.UrlSessionInterceptor"></bean>
         </mvc:interceptor>
         <mvc:interceptor>
             <mvc:mapping path="/**" />
-            <bean id="responseInterceptor" class="com.web.app.common.intercetpor.ResponseInterceptor"></bean>
+            <bean id="responseInterceptor" class="com.web.app.common.interceptor.ResponseInterceptor"></bean>
         </mvc:interceptor>
     </mvc:interceptors>
     
