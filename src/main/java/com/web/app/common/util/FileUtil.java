@@ -11,6 +11,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.web.app.common.commonMap.CommonMap;
 
 public class FileUtil {
     
@@ -197,6 +198,20 @@ public class FileUtil {
             fileName = fileName.substring(backslashIndex + 1);
         }
         return fileName;
+    }
+    
+    @SuppressWarnings("rawtypes")
+    public static void removeFormFile(CommonMap commonMap) throws Exception {
+        // 원본 Map data를 복사한다.(loop 실행 시 원본이 변경될 경우 ConcurrentModificationException이 발생하게 됨)
+        
+        for (Iterator it = commonMap.entrySet().iterator(); it.hasNext();) {
+            Map.Entry entry = (Map.Entry) it.next();
+            String key = (String) entry.getKey();
+            
+            if (commonMap.get(key) instanceof FileUtil) {
+                commonMap.remove(key);
+            }
+        }
     }
     
 }
