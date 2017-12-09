@@ -14,14 +14,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.web.app.common.Constants;
 import com.web.app.common.commonMap.CommonMap;
-import com.web.app.common.intercetpor.UrlSessionInterceptor;
 import com.web.app.common.util.StringUtil;
 import net.sf.json.JSONArray;
 
 
 public class ResponseAction {
     
-    protected static Log log = LogFactory.getLog(UrlSessionInterceptor.class);
+    protected static Log log = LogFactory.getLog(ResponseAction.class);
     
     /**
      * 지정된 URL 페이지로 forwarding
